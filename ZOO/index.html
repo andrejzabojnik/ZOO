@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Hamburger Ikona--> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="css/main.css">
+    <title>ZOO - Hlavna Stranka</title>
+</head>
+<body>
+     <!--NAVIGACIA--> 
+    <header>
+        <nav>
+            <ul>
+               <li class="logo"><a href="index.html"><img src="img/logo.png" alt="logo" width="300"></a></li>
+               <li class="items"><a href="index.html">Domov</a></li>
+               <li class="items"><a href="vstup.html">Vstup</a></li>
+               <li class="items"><a href="zvierata.html">Zvierata</a></li>
+               <li class="items"><a href="kontakt.html">Kontakt</a></li>
+               <li class="btn"><a href="#"><i class="fas fa-bars"></i></a></li>
+            </ul>
+         </nav>
+    </header>
+    <!--HLAVNY OBSAH--> 
+    <main>
+        <!--SLIDE SHOW--> 
+        <div class="slider-box">
+            <div id="slider">
+                <img src="img/slide_image1.jpg" alt="chlapec zo srnkou">
+                <img src="img/slide_image2.jpg" alt="chlapec z kozou">
+                <img src="img/slide_image3.jpg" alt="dievčatko s levom">
+                <img src="img/slide_image4.jpg" alt="dievčatko krmi žirafu">
+            </div>
+           <!--Tlačitka k slideru--> 
+            <div class="indicators">
+                <span id="btn1" class="active"></span>
+                <span id="btn2"></span>
+                <span id="btn3"></span>
+                <span id="btn4"></span>
+            </div>
+        </div>
+
+        <hr>
+
+        <!--Začiatok prveho sekcie/containeru--> 
+        <div class="container-1">
+            <section class="flex-container">
+                <!--Prvy obrazok z textom--> 
+                <div class="flex-child">
+                    <div class="flex-text">
+                        <h2>Naplanuj svoju naštevu</h2>
+                        <h3>NAŠTIV NAŠU ZOO</h3>
+                        <p>Či už plánujete návštevu pre svoju rodinu, narodeninovú oslavu alebo firemnú akciu, máme pre vás špeciálne zážitky zo zoo, nad ktorými sa vybláznite.</p>
+                        <img src="img/section1-img1.jpg" alt="žena pozera na žirafu" width="500" height="450">
+                    </div>
+                </div>
+                <!--Druhy obrazok z textom--> 
+                <div class="flex-child">
+                    <div class="flex-text">
+                        <h2>Zapoj sa!</h2>
+                        <h3>NA VAŠEJ PODPORE ZALEŽI!</h3>
+                        <p>S vašou podporou môžeme aj naďalej vytvárať z vašej zoo miesto na smiech, učenie a objavovanie pre všetky deti a malých zvedavcov.</p>
+                        <img src="img/section1-img2.jpg" alt="pán krmi žirafu" width="500" height="450">
+                    </div>    
+                </div>
+            </section>
+        </div>
+
+        <!--Začiatok druhej sekcie/containeru--> 
+        <div class="container-2">   
+            <section class="flex-container-2">
+                <!--Text k obrazku--> 
+                <div class="flex-child-2">
+                    <div class="flex-text-2">                 
+                        <h2>STAŇ SA ČLENOM</h2>
+                        <p>Ďajkujeme že ste si vybraly práve našu zologicku zahradu. Tým, že sa stanete členom, pomáhate podporovať ochranárske snahy tu aj na celom svete, obohacovať naše zvieratá, školiť zamestnancov zoologickej záhrady a našej zoologickej spoločnosti a ešte oveľa viac! Slubujeme že našu zoo budeme neustále vylepšovař a vy nebudete ľutovať že ste si vybraly práva nás. Vaša podpora je veľmi cenená!</p>
+                   </div>
+                   <!--Obrazok sekcie 2--> 
+                    <img src="img/section2-img1.jpg" alt="lemury" width="500" height="450">
+                </div>
+            </section>
+      </div>
+      <!--Začiatok tretej sekcie/containeru--> 
+      <div class="container-3">   
+         <section class="flex-container-3">
+            <!--Obrazok z textom tretej sekcie--> 
+            <div class="flex-child-3">
+                <img src="img/section3-img1.jpg" alt="" width="500" height="450">
+                <div class="flex-text-3">                 
+                    <h2>TURISTIKA UPLNKOM</h2>
+                    <p>Zamysleli ste sa niekedy nad tým, ako vyzerá Zoo, keď návštevníci odídu a brány sa zatvoria? Pridajte sa k nám v sobotu večer a dozviete sa! Rovnako ako všetci ostatní opúšťajú zoologickú záhradu, pedagógovia vás prevedú na dvojhodinovej pešej prehliadke, aby ste sa dozvedeli a navštívili niektoré z najzaujímavejších zvierat zoo. Sledujte, ako sa niektoré z našich zvieratiek pripravujú na spánok, zatiaľ čo iné sa práve prebúdzajú. Dozviete sa o biológii a správaní zvierat a o úlohe, ktorú zoologická záhrada zohráva pri ochrane našich ohrozených druhov.</p>
+               </div>
+            </div>
+         </section>
+      </div> 
+
+        <!--KREATIVNY BOD! - Popup vyskakovacie okno po otvoreni stranky--> 
+        <div class="popup">
+            <!--Tlačitko pre zatvorenie a &times je pre križik X --> 
+            <button id="close">&times;</button>
+            <h2>Zachráňte ohrozené zvieratá</h2>
+            <p>Existuje mnoho ohrozených zvierat, ktorým hrozí vyhynutie. To znamená, že nám hrozí, že tieto zvieratá úplne stratíme. Podporte nás malou finančnou čiastkov a zachranťe tieto ohrozené zvierata pre naše budúce generacie.</p>
+            <a href="https://www.stopglobaldestruction.org/save-endangered-animals/?gclid=Cj0KCQiAg_KbBhDLARIsANx7wAxF0P26RHLUcJD5MfaJKmfvfCH-Zua-sOmRKiLGH40w4b3xPuipQaMaAoH8EALw_wcB">Podporťe nás</a>
+        </div>
+  
+
+    </main>
+    <!--FOOTER--> 
+    <footer class="footer">
+        <!--Obsah footeru--> 
+        <div class="container">
+            <!--Stlpce footeru--> 
+            <div class="row">
+                <!--Obsah jednotlivych stlpcov--> 
+                <div class="footer-col">
+                    <h4>O stránke</h4>
+                    <p>Táto stránka je robená ako školský projekt jedná sa podstate o fiktivne ZOO. Je spravená pomocou HTML,CSS a JavaScriptu. Prvky su rozlozene na zaklade flexboxu a je plne responzivna.</p>
+                    
+                </div>
+                <div class="footer-col">
+                    <h4>O autorovy</h4>
+                    <p>Andrej Zábojník študent UKF v Nitre</p>
+                    
+                </div>
+                <div class="footer-col">
+                    <h4>Copyright</h4>
+                    <p>© 2022. Všetky práva vyhradené vlastnikovy.</p>
+                </div>
+
+                <!--Zdroje--> 
+                <div class="footer-col">
+                    <h4>Zdroje</h4>
+                    <p><a href="https://www.pexels.com/sk-sk/">Pexels</a></p>
+                    <p><a href="https://unsplash.com">Unsplash</a></p>
+                    <p><a href="https://www.freepik.com/">Freepik</a></p>
+                    <p><a href="https://logo.com/">Logo</a></p>
+                    <p><a href="https://fonts.google.com/">Fonty</a></p>
+                    
+            
+                </div>
+            </div>
+        </div>
+   </footer>
+   
+   <script src="js/script_main.js"></script>
+ </body>
+</html>

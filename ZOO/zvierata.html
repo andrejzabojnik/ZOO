@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Ikonka pre hamburger--> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="css/zvierata.css">
+    <title>Zvieratá</title>
+</head>
+<body>
+     <!--NAVIGACIA--> 
+     <header>
+        <nav>
+            <ul>
+               <li class="logo"><a href="index.html"><img src="img/logo.png" alt="logo" width="300"></a></li>
+               <li class="items"><a href="index.html">Domov</a></li>
+               <li class="items"><a href="vstup.html">Vstup</a></li>
+               <li class="items"><a href="zvierata.html">Zvierata</a></li>
+               <li class="items"><a href="kontakt.html">Kontakt</a></li>
+               <li class="btn"><a href="#"><i class="fas fa-bars"></i></a></li>
+            </ul>
+         </nav>
+    </header>
+    <!--HLAVNY OBSAH--> 
+    <main>
+        <!--Banner s textom--> 
+        <div class="main-image">
+            <div class="banner">
+                <!--Text pre banner--> 
+                <h1><span>Vitaj</span></h1>
+                <span class="podnadpis">Čaka ťa poriadna divočina!</span>
+                <!--Tlačitko v bannery--> 
+                <a href="https://whozoo.org/listodate.htm" class="button">Všetky zvierata tu</a>
+            </div>
+        </div>
+        <hr>
+
+        
+        <div class="container-gallery">
+            <!--Galeria--> 
+            <div class="gallery-box">
+                <div class="gallery">
+                    <!--Obrazky a text k nim--> 
+                <div class="image"><span><img src="img/lion_gallery.jpg" alt="Lev Africky"></span> <div class="zviera"><h3>Lev Africký</h3></div></div>
+                <div class="image"><span><img src="img/tiger_gallery.jpg" alt="Tiger Džunglový"></span><div class="zviera"><h3>Tiger Džunglový</h3></div></div>
+                <div class="image"><span><img src="img/jaguar_gallery.jpg" alt="Jaguar Americký"></span><div class="zviera"><h3>Jaguar Americký</h3></div></div>
+                <div class="image"><span><img src="img/elephan_gallery.jpg" alt="Slon Africky"></span><div class="zviera"><h3>Slon Africký</h3></div></div>
+                <div class="image"><span><img src="img/bear_gallery.jpg" alt="Medveď Grizly"></span><div class="zviera"><h3>Medveď Grizly</h3></div></div>
+                <div class="image"><span><img src="img/rhino_gallery.jpg" alt="Nosorožec Tuponosý"></span><div class="zviera"><h3>Nosorožec Tuponosý</h3></div></div>
+                <div class="image"><span><img src="img/monkey_gallery.jpg" alt="Šimpanz Učenlivý"></span><div class="zviera"><h3>Šimpanz Učenlivý</h3></div></div>
+                <div class="image"><span><img src="img/coala_gallery.jpg" alt="Koala Medvedíková"></span><div class="zviera"><h3>Koala Medvedíkovitá</h3></div></div>
+                <div class="image"><span><img src="img/lemur_gallery.jpg" alt="Lemur Kata"></span><div class="zviera"><h3>Lemur Kata</h3></div></div>
+                </div>
+                <h2>A Mnoho dalších!</h2>
+            </div>
+            <!--KREATIVNY BOD! Light box geleria-->
+            
+            <!--Texty z informaciami o obrazkoch--> 
+            <div class="preview-box">
+                <div class="details">
+                <p class="current-img"></p> <p class="total-img"></p>
+                <span class="icon fas fa-times"></span>
+                </div>
+                <!--Okno v ktorom je obrazok --> 
+                <div class="image-box">
+                <div class="slide prev"><i class="fas fa-angle-left"></i></div>
+                <div class="slide next"><i class="fas fa-angle-right"></i></div>
+                <img src="None" alt="Aktualna Fitka">
+                </div>
+            </div>
+            <!--Tmave pozadie --> 
+            <div class="shadow"></div>
+        </div>  
+
+    </main>
+    <!--FOOTER--> 
+    <footer class="footer">
+        <!--Obsah footeru--> 
+        <div class="container">
+            <!--Stlpce footeru--> 
+            <div class="row">
+                <!--Obsah jednotlivych stlpcov--> 
+                <div class="footer-col">
+                    <h4>O stránke</h4>
+                    <p>Táto stránka je robená ako školský projekt jedná sa podstate o fiktivne ZOO. Je spravená pomocou HTML,CSS a JavaScriptu. Prvky su rozlozene na zaklade flexboxu a je plne responzivna.</p>
+                    
+                </div>
+                <div class="footer-col">
+                    <h4>O autorovy</h4>
+                    <p>Andrej Zábojník študent UKF v Nitre</p>
+                    
+                </div>
+                <div class="footer-col">
+                    <h4>Copyright</h4>
+                    <p>© 2022. Všetky práva vyhradené vlastnikovy.</p>
+                </div>
+
+                <!--Zdroje--> 
+                <div class="footer-col">
+                    <h4>Zdroje</h4>
+                    <p><a href="https://www.pexels.com/sk-sk/">Pexels</a></p>
+                    <p><a href="https://unsplash.com">Unsplash</a></p>
+                    <p><a href="https://www.freepik.com/">Freepik</a></p>
+                    <p><a href="https://logo.com/">Logo</a></p>
+                    <p><a href="https://fonts.google.com/">Fonty</a></p>
+                    
+            
+                </div>
+            </div>
+        </div>
+   </footer>
+   
+   <script src="js/script_zvierata.js"></script>
+    
+</body>
+</html>

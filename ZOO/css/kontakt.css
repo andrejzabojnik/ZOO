@@ -1,0 +1,497 @@
+/*FONTY*/
+@font-face {
+    font-family: "LuckiestGuy";
+    src: url(../fonts/LuckiestGuy-Regular.ttf);
+  }
+  @font-face {
+    font-family: "Yahone";
+    src: url(../fonts/YanoneKaffeesatz-VariableFont_wght.ttf);
+  }
+  
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat',sans-serif;
+  }
+
+  main{
+    padding: 100px;
+  }
+/*NAVIGACIA*/
+
+
+/*Rozlozenia navigacie*/
+
+nav{
+  background: #151515;
+  padding: 5px 40px;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  
+}
+nav ul{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+nav ul li{
+  padding: 15px 0;
+  cursor: pointer;
+}
+nav ul li.items{
+  position: relative;
+  width: auto;
+  margin: 0 16px;
+  text-align: center;
+  order: 3;
+}
+
+/*Efekt zeleneho podčiaknutia*/
+
+nav ul li.items:after{
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 5px;
+  height: 2px;
+  width: 100%;
+  background: #29fd53;;
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+nav ul li.items:hover:after{
+  opacity: 1;
+  bottom: 8px;
+}
+
+/*Dizajn navigacie a hoover*/
+
+
+nav ul li a{
+  color: white;
+  font-size: 23px;
+  text-decoration: none;
+  transition: .4s;
+}
+nav ul li:hover a{
+  color: #29fd53;;
+}
+
+/*Tlačitka pre mobil*/
+
+nav ul li.btn{
+  display: none;
+}
+
+/*Logo navigacie*/
+nav ul li.logo{
+  flex: 1;
+  color: white;
+
+}
+
+/*Responzivita navigacie*/
+@media all and (max-width: 900px){
+  nav{
+    padding: 5px 30px;
+  }
+  nav ul li.items{
+    width: 100%;
+    display: none;
+  }
+  nav ul li.items.show{
+    display: block;
+  }
+  nav ul li.btn{
+    display: block;
+  }
+  nav ul li.items:hover{
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px #29fd53,
+                inset 0 0 10px #246d54;
+  }
+  nav ul li.items:hover:after{
+    opacity: 0;
+  }
+}
+@media all and (max-width: 400px){
+    nav ul li.logo{
+        display: none;
+    }
+}
+
+/*FORMULAR*/
+
+/*Velkost formularu a rozlozenie prvkov*/
+.formular{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 100px;
+ 
+}
+
+/*Odkazy na telefon a email*/
+.formular a{
+  margin-left: 1PX;
+  text-decoration: none;
+  color: rgb(20, 20, 20);
+  padding: -1px;
+  font-weight: bold;
+  font-size: 17px;
+  transition: 0.3s;
+
+  border-radius: 5px;
+
+}
+
+.formular a img{
+  padding-right: 5px;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+
+/*Hoover pre odkazy*/
+.formular a:hover{
+  color: rgb(0, 26, 255);
+ 
+}
+
+/*Okraje pre nadpis formularu*/
+.formular h3{
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+
+/*Pozadie formularu je to obrazok na ktorom je aplikovany filter blur*/
+.formular:after{
+	content: '';
+	position: absolute;
+	width: 150%;
+	height: 100%;
+	background: url("../img/banner.jpg") no-repeat center;
+	background-size: cover;
+	filter: blur(50px);
+	z-index: -1;
+}
+
+/*Rozlozenie prvkov vo formulary*/
+.contact-box{
+	max-width: 850px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: #fff;
+	box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
+}
+/*Obrazok formulara*/
+.left{
+	background: url("../img/contact-img.jpg") no-repeat center;
+	background-size: cover;
+	height: 100%;
+}
+/*Okraje pravej časti aby sa nelepily na obrazok*/
+.right{
+	padding: 25px 40px;
+}
+
+/*Nadpis formulara*/
+.formular h2{
+	position: relative;
+	padding: 0 0 10px;
+	margin-bottom: 10px;
+}
+
+
+/*Zelene podčiarknutie nadpisu*/
+.formular h2:after{
+	  content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 50px;
+    border-radius: 2px;
+    background-color: #2ecc71;
+}
+
+/*Nastavenie zadavavich policok formulara*/
+.field{
+	width: 100%;
+	border: 2px solid rgba(0, 0, 0, 0);
+	outline: none;
+	background-color: rgba(230, 230, 230, 0.6);
+	padding: 0.5rem 1rem;
+	font-size: 1.1rem;
+	margin-bottom: 22px;
+	transition: .3s;
+}
+
+.field:hover{
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+textarea{
+	min-height: 150px;
+}
+/*Submit button formulara*/
+.btns{
+	width: 100%;
+	padding: 0.5rem 1rem;
+	background-color: #2ecc71;
+	color: #fff;
+	font-size: 1.1rem;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	transition: .3s;
+  margin-top: 10px;
+}
+
+.btns:hover{
+    background-color: #27ae60;
+}
+
+
+
+/*Responzivita formulara*/
+@media screen and (max-width: 880px){
+  
+	.contact-box{
+		grid-template-columns: 1fr;
+	}
+
+	.left{
+		height: 200px;
+	}
+
+  .formular a{
+    margin-left: 0px;
+  }
+}
+
+@media screen and (max-width: 495px){
+  .formular a img{
+    display: inline-block;
+  }
+
+  .mail{
+    margin-right: 5px;
+  }
+  .tell{
+    margin-left: 12px ;
+  }
+
+  .formular a{
+    
+    display: block;
+  }
+}
+
+@media screen and (max-width: 988px){
+  .formular a img{
+    padding: 0px 0px;
+  }
+
+  .formular a{
+    margin: 0px 0px;
+ 
+  }
+}
+
+@media screen and (max-width: 881px){
+  .formular a {
+    margin-left: 2px
+  }
+
+}
+
+
+
+
+
+/*AKORDEON*/
+
+/*Velkost jednotlivych boxov*/
+.acordeon-box{
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+}
+
+/*Nadpisy na boxoch*/
+.acordeon-box h2{
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+/*Uprava textu a border*/
+.accordion {
+  margin-bottom: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: rgb(95, 173, 88);
+  color: #ffff;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  font-size: 19px;
+}
+
+
+/*Farba pozadia ktora ostane po otvoreni jednotliveho boxu*/
+.active, .accordion:hover {
+  background-color: rgb(9, 100, 13);
+}
+
+/*Ikonka + na akordeone*/
+.accordion:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  float: right;
+  margin-left: 5px;
+}
+
+
+/*Ikonka - na akordeone*/
+.active:after {
+  content: "\2212";
+}
+
+
+/*Uprava textu po otvoreni*/
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  font-size: 17px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  margin-bottom: 15px;
+  margin-top: 8px;
+}
+
+
+/*Responzivita akordoenu*/
+
+@media screen and (max-width: 900px){
+  main{
+    padding: 5px;
+  }
+
+}
+
+
+  
+/*FOOTER*/
+
+/*Nastavenie velkosti a okrajov celeho footru*/
+.container{
+	max-width: 1170px;
+	margin:auto;
+}
+/*Aby boly jednotlivy stlpce vedla seba v riadku*/
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+/*Farba a okraje*/
+.footer{
+	background-color: #24262b;
+    padding: 70px 0;
+}
+/*Uprava jednotlivych stlpcov*/
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+/*Uprav tlačitiek Zdroje*/
+.footer-col a{
+  
+  text-decoration: none;
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 5px; 
+  margin-bottom: 5px;
+  background-color: #44ad2a;
+  transition: 0.3s;
+}
+
+.footer-col a:hover{
+  background-color: #4ece4e;
+
+}
+
+.footer-col p{
+  margin-bottom: 20px;
+
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+  margin-top: 10px;
+}
+
+/*Podčiarknutie nadpisov*/
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #1ee95b;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+
+/*Uprava textu*/
+.footer-col p{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+
+
+/*Responzivita footer*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}

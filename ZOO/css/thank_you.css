@@ -1,0 +1,264 @@
+@font-face {
+    font-family: "LuckiestGuy";
+    src: url(../fonts/LuckiestGuy-Regular.ttf);
+  }
+  @font-face {
+    font-family: "Yahone";
+    src: url(../fonts/YanoneKaffeesatz-VariableFont_wght.ttf);
+  }
+  
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat',sans-serif;
+  }
+  
+  /*NAVIGACIA*/
+  nav{
+    background: #151515;
+    padding: 5px 40px;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    
+  }
+  nav ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  nav ul li{
+    padding: 15px 0;
+    cursor: pointer;
+  }
+  nav ul li.items{
+    position: relative;
+    width: auto;
+    margin: 0 16px;
+    text-align: center;
+    order: 3;
+  }
+  nav ul li.items:after{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 5px;
+    height: 2px;
+    width: 100%;
+    background: #29fd53;;
+    opacity: 0;
+    transition: all 0.2s linear;
+  }
+  nav ul li.items:hover:after{
+    opacity: 1;
+    bottom: 8px;
+  }
+  nav ul li.logo{
+    flex: 1;
+    color: white;
+  
+  }
+  nav ul li a{
+    color: white;
+    font-size: 23px;
+    text-decoration: none;
+    transition: .4s;
+  }
+  nav ul li:hover a{
+    color: #29fd53;;
+  }
+  
+  nav ul li.btn{
+    display: none;
+  }
+  
+  @media all and (max-width: 900px){
+    nav{
+      padding: 5px 30px;
+    }
+    nav ul li.items{
+      width: 100%;
+      display: none;
+    }
+    nav ul li.items.show{
+      display: block;
+    }
+    nav ul li.btn{
+      display: block;
+    }
+    nav ul li.items:hover{
+      border-radius: 5px;
+      box-shadow: inset 0 0 5px #29fd53,
+                  inset 0 0 10px #246d54;
+    }
+    nav ul li.items:hover:after{
+      opacity: 0;
+    }
+  }
+  @media all and (max-width: 400px){
+      nav ul li.logo{
+          display: none;
+      }
+  }
+
+
+
+  /*Thank you*/
+  h1{
+    
+    border: 7px solid white;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    padding: 20px;
+    font-family: "LuckiestGuy";
+    letter-spacing: 5px;
+    font-weight: inherit;
+    
+
+   
+
+  }
+  .thank{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    
+    margin-bottom: 200px;
+  }
+
+  main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main::after{
+    content: '';
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	left: 0;
+	top: 0;
+	background: url("../img/banner.jpg") no-repeat center;
+	background-size: cover;
+	filter: blur(50px);
+	z-index: -1;
+    
+
+    
+  
+
+  }
+
+
+ /*FOOTER*/
+.container{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: #24262b;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+
+.footer-col a{
+  
+  text-decoration: none;
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 5px; 
+  margin-bottom: 5px;
+  background-color: #44ad2a;
+  transition: 0.3s;
+}
+
+.footer-col a:hover{
+  background-color: #4ece4e;
+
+}
+
+.footer-col p{
+  margin-bottom: 20px;
+
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+  margin-top: 10px;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #1ee95b;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col p{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}

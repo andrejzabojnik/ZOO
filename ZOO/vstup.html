@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="SK">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/vstup.css">
+    <!--Hamburger Ikona--> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <title>Vstup</title>
+</head>
+<body>
+     <!--NAVIGACIA--> 
+     <header>
+        <nav>
+            <ul>
+               <li class="logo"><a href="index.html"><img src="img/logo.png" alt="logo" width="300"></a></li>
+               <li class="items"><a href="index.html">Domov</a></li>
+               <li class="items"><a href="vstup.html">Vstup</a></li>
+               <li class="items"><a href="zvierata.html">Zvierata</a></li>
+               <li class="items"><a href="kontakt.html">Kontakt</a></li>
+               <li class="btn"><a href="#"><i class="fas fa-bars"></i></a></li>
+            </ul>
+         </nav>
+    </header>
+    <!--HLAVNY OBSAH--> 
+    <main>
+        <!--Banner s textom--> 
+        <div class="main-image">
+            <div class="banner">
+                <!--Text pre banner--> 
+                <h1><span>Naštív nás!</span></h1>
+            </div>
+        </div>
+        
+        <hr>
+        <!--Container pre  pozadie--> 
+        <div class="container-main">
+            
+            <!--KREATIVNY BOD Datum a hodiny s realnym časom a ukazatelom otvorenia alebo zatvorenia ZOO-->
+
+            <div class="datetime">
+                <!--Ukazovatel pre otvorenie alebo zatvorenie--> 
+                <h1 class="doba">#</h1>
+                <!--Datum--> 
+                <div class="date">
+                  <span id="dayname">Ďen</span>,
+                  <span id="month">Mesiac</span>
+                  <span id="daynum">00</span>,
+                  <span id="year">Rok</span>
+                </div>
+                <!--Hodiny s realnym čaosm--> 
+                <div class="time">
+                  <span id="hour">00</span>:
+                  <span id="minutes">00</span>:
+                  <span id="seconds">00</span>
+                  <span id="period">Čas</span>
+                </div>
+              </div>
+              <!--Tabulka s cenami pre jednorazovy listok--> 
+            <table class="table cennik">
+                    <tr>
+                        <th>Osoba - Jednorazovy Listok</th>
+                        <th>Cena</th> 
+                    </tr>
+                    <tr>
+                        <td data-label="Osoba">
+                            dieťa do 2 rokov</td>
+                        <td data-label="Cena">bezplatne</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Osoba">dieťa od 2 do 6 rokov</td>
+                        <td data-label="Cena">2,00 €</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Osoba">žiak, študent a dôchodca</td>
+                        <td data-label="Cena">3,50 €</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Osoba">dospelý</td>
+                        <td data-label="Cena">5,50 €</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Osoba">ZTP dospely</td>
+                        <td data-label="Cena">3,00 €</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Osoba">ZTP dietta</td>
+                        <td data-label="Cena">1,50 €</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Vec">fotoaparat a kamera</td>
+                        <td data-label="Cena">bezplatne</td>
+                    </tr>
+            </table>
+            <!--Tabulka pre permanentky--> 
+            <table class="table perma">
+                    <tr>
+                        <th>Osoba - Ročne permanentky</th>
+                        <th>Cena</th>
+                    </tr>
+                    <tr>
+                        <td data-label="Osoba">DOSPELÝ</td>
+                        <td data-label="Cena">35,00 €</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Osoba">DIETA od 6 – 15 rokov</td>
+                        <td data-label="Cena">25,00 €</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Osoba">DIETA od 2 – 6 rokov</td>
+                        <td data-label="Cena">15,00 €</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Osoba">DIETA ZTP</td>
+                        <td data-label="Cena">10,00 €</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Osoba">DÔCHODCA, ŠTUDENT</td>
+                        <td data-label="Cena">25,00 €</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Osoba">ZTP dieta</td>
+                        <td data-label="Cena">1,50 €</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Osoba">fotoaparat a kamera</td>
+                        <td data-label="Cena">bezplatne</td>
+                    </tr>
+               
+            </table>
+            <!--ZOZNAM z otvaracov dobov--> 
+            <div class="clock">
+                <h1>Otvaracie Hodiny</h1>
+                <ul>
+                    <li>Pondelok: 8:00 - 16:00</li>
+                    <li>Utorok:   9:00 - 18:00</li>
+                    <li>Streda:   9:00 - 19:00</li>
+                    <li>Štvrtok:  9:00 - 18:00</li>
+                    <li>Piatok:   9:00 - 17:00</li>
+                    <li>Sobota:   10:00 - 15:00</li>
+                    <li>Nedela:   Zatvorene</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+
+    <!--FOOTER--> 
+    <footer class="footer">
+        <!--Obsah footeru--> 
+        <div class="container">
+            <!--Stlpce footeru--> 
+            <div class="row">
+                <!--Obsah jednotlivych stlpcov--> 
+                <div class="footer-col">
+                    <h4>O stránke</h4>
+                    <p>Táto stránka je robená ako školský projekt jedná sa podstate o fiktivne ZOO. Je spravená pomocou HTML,CSS a JavaScriptu. Prvky su rozlozene na zaklade flexboxu a je plne responzivna.</p>
+                    
+                </div>
+                <div class="footer-col">
+                    <h4>O autorovy</h4>
+                    <p>Andrej Zábojník študent UKF v Nitre</p>
+                    
+                </div>
+                <div class="footer-col">
+                    <h4>Copyright</h4>
+                    <p>© 2022. Všetky práva vyhradené vlastnikovy.</p>
+                </div>
+
+                <!--Zdroje--> 
+                <div class="footer-col">
+                    <h4>Zdroje</h4>
+                    <p><a href="https://www.pexels.com/sk-sk/">Pexels</a></p>
+                    <p><a href="https://unsplash.com">Unsplash</a></p>
+                    <p><a href="https://www.freepik.com/">Freepik</a></p>
+                    <p><a href="https://logo.com/">Logo</a></p>
+                    <p><a href="https://fonts.google.com/">Fonty</a></p>
+                    
+            
+                </div>
+            </div>
+        </div>
+   </footer>
+
+    <script src="js/script_vstup.js"></script>
+</body>
+</html>

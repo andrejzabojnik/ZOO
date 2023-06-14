@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/kontakt.css">
+    <!--Hamburger Ikona--> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <title>Kontakt</title>
+</head>
+<body>
+    <!--NAVIGACIA--> 
+    <header>
+        <nav>
+            <ul>
+               <li class="logo"><a href=""><img src="img/logo.png" alt="logo" width="300"></a></li>
+               <li class="items"><a href="index.html">Domov</a></li>
+               <li class="items"><a href="vstup.html">Vstup</a></li>
+               <li class="items"><a href="zvierata.html">Zvierata</a></li>
+               <li class="items"><a href="kontakt.html">Kontakt</a></li>
+               <li class="btn"><a href="#"><i class="fas fa-bars"></i></a></li>
+            </ul>
+         </nav>
+    </header>
+
+    <!--Hlavny Obsah--> 
+ 
+    <main>
+        <!--Kontaktny formular--> 
+        <div class="formular">
+            <div class="contact-box">
+                <div class="left"></div>
+                <div class="right">
+                    <form action="POST">
+                        <h2>Kontaktuj Nás</h2>
+                        <!--Odkazy na Email a Telefon--> 
+                        <a href="mailto:zoologickazahrada@gmail.com"> <img class="mail" src="/img/email.png" alt="">Email</a>
+                        <a href="tel:0908442397"> <img class="tell" src="/img/telephone.png" alt=""> Telefon</a>
+                        <h3>Alebo nám napiš spravu</h3>
+                        <input type="text" class="field" placeholder="Meno" id="meno">
+                        <input type="email" class="field" placeholder="Emai" id="email">
+                        <input type="text" class="field" placeholder="Telefonne číslo" id="tel">
+                        <textarea placeholder="Správa" class="field" id="sprava"></textarea>
+                        <input type="checkbox" class="form-check-input" id="suhlasim">
+                        <label class="form-check-label" for="suhlasim">Súhlasim s spracovanim osobnych udajov</label>
+                        <input class="btns" type="button" id="odoslat" value="Odoslat">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+        <!--Akordeon-->
+
+        <div class="acordeon-box">
+            <h2>Často kladené otazky - FAQ</h2>
+        <!--Text a tlačitka akordeonu--> 
+            <button class="accordion">
+                Musím si pred návštevou zakúpiť vstupenku na konkrétny dátum?</button>
+            <div class="panel">
+            <p>Hostia nepotrebujú na návštevu ZOO vstupné vopred na konkrétny dátum. Ak si potrebujete kúpiť lístok, môžete si ho zakúpiť v deň návštevy v ktoromkoľvek okienku so vstupenkami.</p>
+            </div>
+
+            <button class="accordion">Aké parkovacie možnosti poskytujete?</button>
+            <div class="panel">
+            <p>O parkovanie sa u nás báť nemusíťe! Dosponujeme až 300 parkovích miest pred hlavným vchodom plus špecialne vyhradene miesta v podzemnej garáži.</p>
+            </div>
+
+            <button class="accordion">Ake spošoby platby platobnými kartami akceptujete?</button>
+            <div class="panel">
+            <p>Akceptujeme karty Visa, MasterCard, American Express, Diners Club.</p>
+            </div>
+
+            <button class="accordion">Ako môžem pomôcť pri ochrane voľne žijúcich živočíchov pri návšteve?</button>
+            <div class="panel">
+            <p>Kvôli bezpečnosti hostí a voľne žijúcich živočíchov sa počas návštevy zdržiavajte na verejných cestách.</p>
+            </div>
+
+            <button class="accordion">Mám si počas návštevy kam uložiť tašky alebo batožinu?</button>
+            <div class="panel">
+            <p>Nie, ZOO nemá uzamykateľné skrinky na uloženie vašich vecí počas vašej návštevy.</p>
+            </div>
+
+       </div>
+       
+    </main>
+    <!--FOOTER--> 
+    <footer class="footer">
+        <!--Obsah footeru--> 
+        <div class="container">
+            <!--Stlpce footeru--> 
+            <div class="row">
+                <!--Obsah jednotlivych stlpcov--> 
+                <div class="footer-col">
+                    <h4>O stránke</h4>
+                    <p>Táto stránka je robená ako školský projekt jedná sa podstate o fiktivne ZOO. Je spravená pomocou HTML,CSS a JavaScriptu. Prvky su rozlozene na zaklade flexboxu a je plne responzivna.</p>
+                    
+                </div>
+                <div class="footer-col">
+                    <h4>O autorovy</h4>
+                    <p>Andrej Zábojník študent UKF v Nitre</p>
+                    
+                </div>
+                <div class="footer-col">
+                    <h4>Copyright</h4>
+                    <p>© 2022. Všetky práva vyhradené vlastnikovy.</p>
+                </div>
+
+                <!--Zdroje--> 
+                <div class="footer-col">
+                    <h4>Zdroje</h4>
+                    <p><a href="https://www.pexels.com/sk-sk/">Pexels</a></p>
+                    <p><a href="https://unsplash.com">Unsplash</a></p>
+                    <p><a href="https://www.freepik.com/">Freepik</a></p>
+                    <p><a href="https://logo.com/">Logo</a></p>
+                    <p><a href="https://fonts.google.com/">Fonty</a></p>
+                    
+            
+                </div>
+            </div>
+        </div>
+   </footer>
+   
+   <script src="js/script_kontakt.js"></script>
+    
+</body>
+</html>

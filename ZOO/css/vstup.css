@@ -1,0 +1,533 @@
+
+/*FONTY*/
+@font-face {
+  font-family: "LuckiestGuy";
+  src: url(../fonts/LuckiestGuy-Regular.ttf);
+}
+@font-face {
+  font-family: "Yahone";
+  src: url(../fonts/YanoneKaffeesatz-VariableFont_wght.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat',sans-serif;
+  }
+
+  .container-main{
+    background-image: url(../img/vstup-background.jpg);
+  }
+  
+  /*NAVIGACIA*/
+
+
+/*Rozlozenia navigacie*/
+
+nav{
+  background: #151515;
+  padding: 5px 40px;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  
+}
+nav ul{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+nav ul li{
+  padding: 15px 0;
+  cursor: pointer;
+}
+nav ul li.items{
+  position: relative;
+  width: auto;
+  margin: 0 16px;
+  text-align: center;
+  order: 3;
+}
+
+/*Efekt zeleneho podčiaknutia*/
+
+nav ul li.items:after{
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 5px;
+  height: 2px;
+  width: 100%;
+  background: #29fd53;;
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+nav ul li.items:hover:after{
+  opacity: 1;
+  bottom: 8px;
+}
+
+/*Dizajn navigacie a hoover*/
+
+
+nav ul li a{
+  color: white;
+  font-size: 23px;
+  text-decoration: none;
+  transition: .4s;
+}
+nav ul li:hover a{
+  color: #29fd53;;
+}
+
+/*Tlačitka pre mobil*/
+
+nav ul li.btn{
+  display: none;
+}
+
+/*Logo navigacie*/
+nav ul li.logo{
+  flex: 1;
+  color: white;
+
+}
+
+/*Responzivita navigacie*/
+@media all and (max-width: 900px){
+  nav{
+    padding: 5px 30px;
+  }
+  nav ul li.items{
+    width: 100%;
+    display: none;
+  }
+  nav ul li.items.show{
+    display: block;
+  }
+  nav ul li.btn{
+    display: block;
+  }
+  nav ul li.items:hover{
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px #29fd53,
+                inset 0 0 10px #246d54;
+  }
+  nav ul li.items:hover:after{
+    opacity: 0;
+  }
+}
+@media all and (max-width: 400px){
+    nav ul li.logo{
+        display: none;
+    }
+}
+
+/*BANNER*/
+
+/*Nastavenie obrazku banneru*/
+.main-image{
+  position: relative;
+  background: url(../img/vstup.jpg) no-repeat left;
+  background-size: cover;
+  height: 100vh;
+  overflow: hidden;
+  opacity: 0.8;
+}
+
+/*Umiestnenie textu*/
+.banner{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+/*Nastavenie nadpisu*/
+.banner h1{
+  margin: 0;
+  font-size: 70px;
+  font-weight: 900;
+  border: 6px solid white;
+  border-radius: 10px;
+  padding: 6px 14px; 
+  text-align: center;
+  
+}
+
+/*Responzivita banneru*/
+@media(max-width: 500px){
+  .banner h1{
+    font-size: 50px;
+  }
+}
+
+@media(max-width: 276px){
+  .banner h1{
+    font-size: 30px;
+  }
+
+}
+
+  /*KREATIVNY BOD! datum z hodinami a ukazovatelom zatvorenia zoo*/
+
+  /*Nastavenie velkosti a farby celeho okna*/
+  .datetime{
+    color: #fff;
+    background: #10101E;
+    width: 98%;
+    margin: auto;
+    padding: 15px 10px;
+    border: 3px solid #2ee364;
+    border-radius: 5px;
+    transition: 0.5s;
+  }
+  
+  .datetime:hover{
+    background: #64a57b;
+  }
+
+
+  /*Nastavenie velkosti textu a usadenie datumu*/ 
+  .date{
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 3px;
+  }
+  /*Nastavenie velkosti textu a usedenie hodin*/
+  .time{
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    margin: 0 6px;
+    letter-spacing: 8px;
+
+  }
+  
+
+/*Nastavenie PM*/  
+  #period{
+    background: #35a82a;
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 10px;
+    padding: 0 5px;
+    border-radius: 3px;
+  }
+
+  /*Nastavenie nadpisu z informaciou o otvoreni*/
+  .doba{
+    text-align: center;
+    font-size: 60px;
+   
+  }
+
+  /*Responzivita*/
+
+  @media all and (max-width: 530px){
+    .doba{
+      font-size: 30px;
+    }
+    .time{
+      font-size: 22px;
+    }
+    .data{
+      font-size: 25px;
+    }
+    #period{
+      font-size: 20px;
+    }
+  }
+
+  @media all and (max-width: 260px){
+    .doba{
+      font-size: 21px;
+    }
+    .date{
+      font-size: 15px;
+    }
+    .time{
+      font-size: 17px;
+    }
+    #period{
+      display: none;
+    }
+
+  }
+
+/*TABULKY*/
+
+/*Nastevenie širky okrajov a upravy tabuliek*/
+table {
+  width: 80%;
+  margin: auto;
+  border-collapse: collapse;
+  box-shadow: 0 5px 10px green;
+  background-color: rgb(255, 255, 255);
+  border: 5px solid rgb(8, 184, 8);
+  border-radius: 10px;
+  text-align: left;
+  overflow: hidden;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  transition: 0.3s;
+  }
+
+
+
+
+
+/*Nastavenie nadpisu tabuliek*/
+  th {
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 1.5rem;
+    font-weight: 900;
+  }
+
+ /*Okraje riadkov*/
+  td {
+    padding: 1rem 2rem;
+  }
+  /*Velkost textu ostanych raidkov*/
+  tr{
+    font-size: 1.3rem;
+  }
+
+
+/*Responzivita tabuliek*/
+@media(max-width: 338px){
+  tr{
+    font-size: 1rem;
+  }
+
+}
+
+@media(max-width: 350px){
+  h2{
+    font-size: 2.6vh;
+    border: none;
+
+
+  }
+}
+
+@media(max-width: 500px){
+
+	.table, .table tr, .table td{
+		display: block;
+		width: 100%;
+	}
+	.table tr{
+		margin-bottom:15px;
+	}
+	.table td{
+		text-align: right;
+		padding-left: 50%;
+		text-align: right;
+		position: relative;
+	}
+	.table td::before{
+		content: attr(data-label);
+		position: absolute;
+		left:0;
+		width: 50%;
+		padding-left:15px;
+		font-size:15px;
+		font-weight: bold;
+		text-align: left;
+	}
+
+  .table th{
+    display: none;
+  }
+}
+
+@media(max-width: 240px){
+  .table tr{
+    font-size: 13px;
+  }
+  .table td::before{
+    font-size: 12px;
+  }
+
+}
+
+
+
+
+
+
+
+/*Zoznam z otvorenim*/
+
+/*Nastavenie širka,okrajov a uprava celeho boxu*/
+.clock{
+  border: 3px solid green;
+  box-shadow: 0 5px 10px green;
+  border-radius: 10px;
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  background-color: #10101E;
+  color: white;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+.clock:hover{
+  background-color: #64a57b;
+}
+
+/*Nastavenie hlavneho nadpisu*/
+.clock h1{
+  font-family: "LuckiestGuy";
+  letter-spacing: 3px;
+  color: #cdcf49;
+}
+
+
+/*Nastavenie textu*/
+.clock ul li{
+  font-size: 30px;
+  font-weight: 400;
+
+}
+
+/*Responzivita zoznamu*/
+@media(max-width: 910px){
+  .clock{
+    width: 100%;
+  }
+}
+
+@media(max-width: 450px){
+  .clock{
+    width: 100%;
+  }
+  .clock h1{
+    padding: 10px;
+    font-size: 22px;
+  }
+  .clock ul li{
+    font-size: 20px
+  }
+
+}
+
+@media(max-width: 188px){
+  .clock h1{
+    font-size: 15px;;
+  }
+  .clock ul li{
+    font-size: 15px;
+ 
+  }
+}
+
+
+
+
+/*FOOTER*/
+
+/*Nastavenie velkosti a okrajov celeho footru*/
+.container{
+	max-width: 1170px;
+	margin:auto;
+}
+/*Aby boly jednotlivy stlpce vedla seba v riadku*/
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+/*Farba a okraje*/
+.footer{
+	background-color: #24262b;
+    padding: 70px 0;
+}
+/*Uprava jednotlivych stlpcov*/
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+/*Uprav tlačitiek Zdroje*/
+.footer-col a{
+  
+  text-decoration: none;
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 5px; 
+  margin-bottom: 5px;
+  background-color: #44ad2a;
+  transition: 0.3s;
+}
+
+.footer-col a:hover{
+  background-color: #4ece4e;
+
+}
+
+.footer-col p{
+  margin-bottom: 20px;
+
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+  margin-top: 10px;
+}
+
+/*Podčiarknutie nadpisov*/
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #1ee95b;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+
+/*Uprava textu*/
+.footer-col p{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+
+
+/*Responzivita footer*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
